@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "497799790389",
+    "firebase_url": "https://activity-finder-7a9a4-default-rtdb.europe-west1.firebasedatabase.app/",
+    "project_id": "activity-finder-7a9a4",
+    "storage_bucket": "activity-finder-7a9a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497799790389:android:ea910247cc79c4b604d67c",
+        "android_client_info": {
+          "package_name": "cz.cvut.fel.activityfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497799790389-c6uivv54askv58td1fhkgt73rop962pa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATSQrlQ_cCQZHQX_eUAThy_6TPqRLGDFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497799790389-c6uivv54askv58td1fhkgt73rop962pa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="cz.cvut.fel.activityfinder.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="cz.cvut.fel.activityfinder.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/myActivitiesFragment"
+        android:name="cz.cvut.fel.activityfinder.MyActivitiesFragment"
+        android:label="fragment_my_activities"
+        tools:layout="@layout/fragment_my_activities" />
+    <fragment
+        android:id="@+id/myProfileFragment"
+        android:name="cz.cvut.fel.activityfinder.MyProfileFragment"
+        android:label="fragment_my_profile"
+        tools:layout="@layout/fragment_my_profile" />
+</navigation>

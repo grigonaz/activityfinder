@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewActivityActivity">
+
+    <TextView
+        android:id="@+id/new_activity_header"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:elegantTextHeight="true"
+        android:singleLine="true"
+        android:text="@string/new_activity"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/new_activity_back"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="36dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:background="#00FFFFFF"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back"
+        android:contentDescription="Back" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_min="500dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_activity_header"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/new_activity_position"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/rounded_corner_text"
+                android:elegantTextHeight="true"
+                android:ellipsize="middle"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/select_position"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_activity_name" />
+
+            <TextView
+                android:id="@+id/new_activity_date_from"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/rounded_corner_text"
+                android:elegantTextHeight="true"
+                android:ellipsize="middle"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/from"
+                android:textAlignment="center"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/new_activity_date_to"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_activity_position" />
+
+            <TextView
+                android:id="@+id/new_activity_date_to"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/rounded_corner_text"
+                android:elegantTextHeight="true"
+                android:ellipsize="middle"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/to"
+                android:textAlignment="center"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/new_activity_date_from"
+                app:layout_constraintTop_toBottomOf="@+id/new_activity_position" />
+
+            <EditText
+                android:id="@+id/new_activity_name"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/rounded_corner_text"
+                android:elegantTextHeight="true"
+                android:ems="10"
+                android:hint="@string/placeholder_activity_name"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/new_activity_type_choose"
+                style="@style/DropDownArrow"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:spinnerMode="dialog"
+                android:textColor="@android:color/primary_text_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_activity_date_range_info" />
+
+            <EditText
+                android:id="@+id/new_activity_max_count"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/rounded_corner_text"
+                android:elegantTextHeight="true"
+                android:ems="10"
+                android:hint="@string/placeholder_maximum_of_participants"
+                android:inputType="number"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_activity_type_choose" />
+
+            <EditText
+                android:id="@+id/new_activity_description"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/rounded_corner_text"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/placeholder_description"
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:singleLine="false"
+                android:textColor="@android:color/primary_text_light"
+                app:layout_constraintBottom_toTopOf="@+id/participate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_min="60dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_activity_max_count" />
+
+            <Button
+                android:id="@+id/participate"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/create_button"
+                android:textColor="?android:attr/colorForeground"
+                app:cornerRadius="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="?android:attr/colorForeground" />
+
+            <TextView
+                android:id="@+id/new_activity_date_range_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/placeholder_set_date"
+                android:textColor="?android:attr/colorForeground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_activity_date_from" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
